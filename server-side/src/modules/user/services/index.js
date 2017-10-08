@@ -1,6 +1,7 @@
 const db = require('../../../services/database/db')
+const errorHandler = require('../../../services/handlers/error')
 const repositorys = require('../repositorys')
-
+const sha1 = require('sha1')
 let services = {}
 
 services.getUsers = () => {
@@ -9,11 +10,33 @@ services.getUsers = () => {
   return new Promise((resolve, reject) => {
     db.query(query, (err, results) => {
       if (err || !results.length) {
-        reject(new Error('Erro buscar usuarios.', err))
+        if (err === null) err = 'Erro buscar usuarios.'  
+        errorHandler(err, 'Erro buscar usuarios.', reject)
         return false
       }
 
       return resolve({ user: { results } })
+    })
+  })
+}
+
+services.addNewUser = (email, senha) => {
+  const query = repositorys.addNewUser(email, sha1(senha))
+
+  return new Promise((resolve, reject) => {
+    if (email === undefined || senha === undefined) {
+      errorHandler('E-mail e/ou senha vazio(s).', 'E-mail e/ou senha vazio(s).', reject)
+      return false
+    }
+
+    db.query(query, (err, result) => {
+      if (err) {
+        if (err === null) err = 'Erro ao adicionar um novo usuario.'  
+        errorHandler(err, 'Erro ao adicionar um novo usuario.', reject)
+        return false
+      }
+
+      return resolve({ user: { email, id: result.insertId } })
     })
   })
 }

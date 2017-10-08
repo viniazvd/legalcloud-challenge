@@ -1,0 +1,17 @@
+{
+	"files.exclude": {
+		// Defaults
+		"**/.git": true,
+		"**/.DS_Store": true,
+		// This excludes all node_modules folders from the explore tree
+		"**/node_modules": true,
+		// Root only
+		// "node_modules": true,
+		// Build dir
+		"dist": true,
+		// Generated docs
+		"docs": true,
+		// Generated files for test reports
+		"reports/**/*": true
+	}
+}

@@ -19,7 +19,7 @@ middlewares.use(cookieParser())
 middlewares.use(express.static(path.join(__dirname, 'public')))
 middlewares.use(cors)
 
-const exclusions = ['/api/authenticate']
+const exclusions = ['/api/authenticate', '/api/logout']
 middlewares.use(isAuth({ exclusions }))
 
 module.exports = middlewares

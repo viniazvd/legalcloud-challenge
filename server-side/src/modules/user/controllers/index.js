@@ -9,4 +9,13 @@ controller.getUsers = (req, res) => {
     .catch(error => res.status(404).send(error))
 }
 
+// add new user
+controller.addNewUser = (req, res) => {
+  const { email, senha } = req.body
+
+  service.addNewUser(email, senha)
+    .then(result => res.status(200).send(result))
+    .catch(error => res.status(404).send(error))
+}
+
 module.exports = controller

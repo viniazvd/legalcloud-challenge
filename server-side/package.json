@@ -17,7 +17,8 @@
     "jsonwebtoken": "^7.4.3",
     "morgan": "~1.6.1",
     "mysql": "^2.14.1",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "sha1": "^1.1.1"
   },
   "devDependencies": {
     "eslint": "^4.8.0",
@@ -25,7 +26,6 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.2.0",
     "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "sha1": "^1.1.1"
+    "eslint-plugin-standard": "^3.0.1"
   }
 }

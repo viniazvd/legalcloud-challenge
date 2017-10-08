@@ -1,7 +1,7 @@
-const error = (error, msg, rejectFunction) => {
-  console.error(error)
+module.exports = (error, msg, rejectFunction) => {
+  console.error('error: ', error)
 
   rejectFunction({ error: msg })
 }
 
-module.exports = error
+
