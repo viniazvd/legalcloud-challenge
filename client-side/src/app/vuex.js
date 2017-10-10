@@ -1,3 +1,3 @@
-import { vuex as auth } from './auth'
+import { vuex as login } from './login'
 
-export default { auth }
+export default { login }

@@ -25,6 +25,7 @@ export default {
   },
 
   methods: {
+    // apagar
     onToggleMenu () {
       this.isOpen = !this.isOpen
     }

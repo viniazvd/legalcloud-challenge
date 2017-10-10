@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<ul class="nav navbar-nav navbar-right">
-			<router-link to="/auth" tag="li" v-if="!isAuthenticated">	
+			<router-link to="/login" tag="li" v-if="!isAuthenticated">	
 				<a style="color: #fff;"><strong>Login</strong></a>
 			</router-link>
 			<li class="dropdown" :class="{ open: isOpenUser }" v-if="isAuthenticated">
@@ -53,7 +53,7 @@ export default {
     },
 
     redirectPage () {
-      this.$router.push('/auth')
+      this.$router.push('/login')
     }
   },
 
