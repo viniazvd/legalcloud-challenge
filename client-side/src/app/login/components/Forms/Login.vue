@@ -31,9 +31,9 @@
         <p class="result"><i>Connected with database:</i> <strong>{{dbSelected}}</strong></p>
       </div>
 
-      <md-button class="btn btn-success btnconfigSize" :disabled="!isValid" @click="doLogin">SignIn</md-button>
-      <md-button class="btn btn-danger btnconfigSize" :disabled="!isValid" @click="signUp">SignUp</md-button>
-      <md-button class="btn btn-primary btnconfigSize" @click="checkUsers">CheckUsers</md-button>
+      <button class="btn btn-success btnconfigSize" :disabled="!isValid" @click="doLogin">SignIn</button>
+      <button class="btn btn-danger btnconfigSize" :disabled="!isValid" @click="signUp">SignUp</button>
+      <button class="btn btn-primary btnconfigSize" @click="checkUsers">CheckUsers</button>
     </form>
 
     <input type="checkbox" class="material_checkbox" v-model="showListUsers">
