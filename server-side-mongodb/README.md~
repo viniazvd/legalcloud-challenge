@@ -8,9 +8,6 @@
 # install dependencies
 npm install
 
-# run mongo
-mongod
-
 # run server on localhost:3000
 npm start / nodemon
 
