@@ -11,11 +11,9 @@ api restfull: node / express / mysql &amp; mongodb - vuejs
 # melhorias no código
 - nunca fique satisfeito com seu código. tente sempre melhorá-lo e refatorar.
 - no caso desse desafio, faltou:
-
-- implementar o sequelize
-- aplicar TDD
-- aplicar testes
-- 'fragmentar/componentizar' mais os arquivos vue -principalmente o Login.vue
+. implementar o sequelize
+. aplicar TDD
+. 'componentizar' mais os arquivos vue -principalmente o Login.vue
 
 # principais dificuldades enfrentadas
 - material design não fornece um menu horizontal, então importei algumas coisas do bootstrap.
